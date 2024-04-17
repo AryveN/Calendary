@@ -14,6 +14,7 @@
 		926116182BD03D9700CD3257 /* CalendaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926116172BD03D9700CD3257 /* CalendaryTests.swift */; };
 		926116222BD03D9700CD3257 /* CalendaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926116212BD03D9700CD3257 /* CalendaryUITests.swift */; };
 		926116242BD03D9700CD3257 /* CalendaryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926116232BD03D9700CD3257 /* CalendaryUITestsLaunchTests.swift */; };
+		AC055BCE7ABC45AB1A154585 /* DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0559ADD561C8394A96BCDA /* DefaultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		9261161D2BD03D9700CD3257 /* CalendaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalendaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		926116212BD03D9700CD3257 /* CalendaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendaryUITests.swift; sourceTree = "<group>"; };
 		926116232BD03D9700CD3257 /* CalendaryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendaryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AC0559ADD561C8394A96BCDA /* DefaultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultView.swift; path = Views/Test/DefaultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				926116082BD03D9400CD3257 /* ContentView.swift */,
 				9261160A2BD03D9700CD3257 /* Assets.xcassets */,
 				9261160C2BD03D9700CD3257 /* Preview Content */,
+				AC0559ADD561C8394A96BCDA /* DefaultView.swift */,
 			);
 			path = Calendary;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			files = (
 				926116092BD03D9400CD3257 /* ContentView.swift in Sources */,
 				926116072BD03D9400CD3257 /* CalendaryApp.swift in Sources */,
+				AC055BCE7ABC45AB1A154585 /* DefaultView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

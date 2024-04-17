@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   version = "1.3">
+   <BuildAction>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForRunning = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "926116022BD03D9400CD3257"
+               BuildableName = "Calendary.app"
+               BlueprintName = "Calendary"
+               ReferencedContainer = "container:Calendary.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <LaunchAction
+      useCustomWorkingDirectory = "YES"
+      buildConfiguration = "Debug"
+      allowLocationSimulation = "YES"
+      customWorkingDirectory = "/Users/aryven/Programming/Calendary">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "926116022BD03D9400CD3257"
+            BuildableName = "Calendary.app"
+            BlueprintName = "Calendary"
+            ReferencedContainer = "container:Calendary.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+</Scheme>
