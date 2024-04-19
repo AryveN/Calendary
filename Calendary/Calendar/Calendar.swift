@@ -1,28 +1,20 @@
 import Foundation
 import os
 
-struct CalendarValues {
-    var currentDate: Date = Date()
-    var currentDay: Int = 0
-    var currentMonth: Int = 0
-    var currentYear: Int = 0
-    var firstDayOfMonth: Int = 0
-    var daysInMonth: Int = 0
-}
-
 class CalendarHandler {
+    // Logger import
     let logger = Logger()
+    // Gets current date
+    var currentDate: Date = Date()
 
-    //Custom calendar values
-    var calendarValues = CalendarValues()
-    //Swift calendar
+    // Swift calendar
     var swiftCalendar = Calendar.current
 
-    //Find current day from current date
+    // Find current day from current date
     func findCurrentDay() -> Int {
-        let components = swiftCalendar.dateComponents([.day], from: calendarValues.currentDate)
+        // Separates day from current date
+        let components = swiftCalendar.dateComponents([.day], from: currentDate)
         if let day = components.day {
-            calendarValues.currentDay = day
             return day
         } else {
             logger.error("[Error] Cannot find day from current date!")
@@ -30,11 +22,11 @@ class CalendarHandler {
         }
     }
 
-    //Find current month from current date
+    // Find current month from current date
     func findCurrentMonth() -> Int {
-        let components = swiftCalendar.dateComponents([.month], from: calendarValues.currentDate)
+        // Separates month from current date
+        let components = swiftCalendar.dateComponents([.month], from: currentDate)
         if let month = components.month {
-            calendarValues.currentMonth = month
             return month
         } else {
             logger.error("[Error] Cannot find month from current date!")
@@ -42,11 +34,11 @@ class CalendarHandler {
         }
     }
 
-    //Find current year from current date
+    // Find current year from current date
     func findCurrentYear() -> Int {
-        let components = swiftCalendar.dateComponents([.year], from: calendarValues.currentDate)
+        // Separates year from current date
+        let components = swiftCalendar.dateComponents([.year], from: currentDate)
         if let year = components.year {
-            calendarValues.currentYear = year
             return year
         } else {
             logger.error("[Error] Cannot find year from current date!")
@@ -54,19 +46,26 @@ class CalendarHandler {
         }
     }
 
-    //Find number of days in a month
-    func findDaysInMonth() -> Int {
-        if let range = swiftCalendar.range(of: .day, in: .month, for: calendarValues.currentDate) {
-            calendarValues.daysInMonth = range.count
+    // Find number of days in a month
+    func findDaysInMonth(for date: Date) -> Int {
+        // Get range of days from current date
+        if let range = swiftCalendar.range(of: .day, in: .month, for: date) {
             return range.count
         } else {
             logger.error("[Error] Cannot find number of days in month from current date!")
             return 0
         }
-        
     }
 
-    func findFirstDayOfMonth() -> Int {
-        let components = swiftCalendar.firstWeekday()
+    func findFirstDayOfMonth(for date: Date) -> Int {
+        let components = swiftCalendar.dateComponents([.year, .month], from: date)
+        // Create a date for the first day of the month
+        let firstDayOfMonth = swiftCalendar.date(from: components)!
+        // Get the weekday component (numerical value)
+        var weekdayNumber = swiftCalendar.component(.weekday, from: firstDayOfMonth)
+
+        // Ensures that Monday is the first day
+        weekdayNumber = (weekdayNumber == 1 ? 7 : weekdayNumber - 1)
+        return weekdayNumber
     }
 }

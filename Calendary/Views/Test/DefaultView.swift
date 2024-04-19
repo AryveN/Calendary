@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct DefaultView: View {
+    let calendarValues = CalendarHandler()
     var body: some View {
         VStack {
             Rectangle()
@@ -15,8 +16,13 @@ struct DefaultView: View {
                         .clipped()
                 }
                 .padding(20)
-            Text("Hello, World!")
+            Text("Debug Info:")
                 .foregroundColor(.white)
+            Text("Day: \(calendarValues.findCurrentDay())")
+            Text("Month: \(calendarValues.findCurrentMonth())")
+            Text("Year: \(calendarValues.findCurrentYear())")
+            Text("Days in Month: \(calendarValues.findDaysInMonth(for: Date()))")
+            Text("First day in Month: \(calendarValues.findFirstDayOfMonth(for: Date()))")
         }
     }
 }

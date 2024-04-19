@@ -49,6 +49,7 @@
 		926116212BD03D9700CD3257 /* CalendaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendaryUITests.swift; sourceTree = "<group>"; };
 		926116232BD03D9700CD3257 /* CalendaryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendaryUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AC055025F64D6CB8A9F60D89 /* Icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Icon.swift; path = Views/Components/Icon.swift; sourceTree = "<group>"; };
+
 		AC055711F19C5F893B5CC95C /* Spinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Spinner.swift; path = Views/Components/Spinner.swift; sourceTree = "<group>"; };
 		AC0559ADD561C8394A96BCDA /* DefaultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultView.swift; path = Views/Test/DefaultView.swift; sourceTree = "<group>"; };
 		AC055AA37CF629EC545C753C /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
